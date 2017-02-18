@@ -90,12 +90,12 @@ axis(side=1, at= c(1,num_entries/2,num_entries), labels = c("Thu","Fri","Sat"))
 #--------------
 # Subplot 3
 #--------------
-plot(pow_df$Sub_metering_1,  type = "l", main = "", col = "darkgreen",
+plot(pow_df$Sub_metering_1,  type = "l", main = "", col = "black",
      ylab = "Energy sub metering", xlab = "" , xaxt = "n")
 
 points(pow_df$Sub_metering_2, type = "l", col= "red")
 points(pow_df$Sub_metering_3, type = "l", col= "blue")
-legend("topright",lty=1,col=c("darkgreen","blue","red"),
+legend("topright",lty=1,col=c("black","blue","red"),
        legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),
        bty="n")
 axis(side=1, at= c(1,num_entries/2,num_entries), labels = c("Thu","Fri","Sat"))
@@ -105,7 +105,7 @@ axis(side=1, at= c(1,num_entries/2,num_entries), labels = c("Thu","Fri","Sat"))
 # Subplot 4
 #--------------
 plot(pow_df$Global_reactive_power,  type = "l", main = "",
-     ylab = "Global Reactive Power", xlab = "datetime" , xaxt = "n")
+     ylab = "Global_reactive_power", xlab = "datetime" , xaxt = "n")
 
 axis(side=1, at= c(1,num_entries/2,num_entries), labels = c("Thu","Fri","Sat"))
 

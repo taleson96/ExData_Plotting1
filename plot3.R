@@ -57,12 +57,12 @@ png(filename = "plot3.png",
 ## Create Plot1
 ##--------------------------------------------------------
 plot.new()
-plot(pow_df$Sub_metering_1,  type = "l", main = "", col = "darkgreen",
+plot(pow_df$Sub_metering_1,  type = "l", main = "", col = "black",
      ylab = "Energy sub metering", xlab = "" , xaxt = "n")
 
 points(pow_df$Sub_metering_2, type = "l", col= "red")
 points(pow_df$Sub_metering_3, type = "l", col= "blue")
-legend("topright",lty=1,col=c("darkgreen","blue","red"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
+legend("topright",lty=1,col=c("black","blue","red"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
 
 num_entries = length(pow_df$Global_active_power)
 axis(side=1, at= c(1,num_entries/2,num_entries), labels = c("Thu","Fri","Sat"))
