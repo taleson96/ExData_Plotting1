@@ -11,8 +11,13 @@
 #### Description:
 ####   This file will read, clean, and plot data from UCI Dataset.
 #### 
-####   plot2 is a graph of the three sub-metering variablesr vs time.  
+####   plot4 is a shows 4 different sub plots vs time.
 ####      (from feb.1.2007 to feb.2.2007)
+####
+####   1) Global Active Power vs Time.
+####   2) Voltage vs Time
+####   3) Sub Meters vs Time
+####   4) Global Reactive Power
 ####   
 #### Functions: none
 #### 

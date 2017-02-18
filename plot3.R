@@ -11,7 +11,7 @@
 #### Description:
 ####   This file will read, clean, and plot data from UCI Dataset.
 #### 
-####   plot2 is a graph of the three sub-metering variablesr vs time.  
+####   plot3 is a graph of the Sub meters vs time.  
 ####      (from feb.1.2007 to feb.2.2007)
 ####   
 #### Functions: none
