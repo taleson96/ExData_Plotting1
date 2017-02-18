@@ -62,6 +62,5 @@ hist(pow_df$Global_active_power, breaks=12, col="red",
 ##--------------------------------------------------------
 ## FLush plot to output plot1.png
 ##--------------------------------------------------------
-#dev.copy(png,file="plot1.png") #used during testing.
 
 dev.off()

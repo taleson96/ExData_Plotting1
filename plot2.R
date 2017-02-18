@@ -20,13 +20,29 @@
 ####
 ####
 ####============================================================================
+# Some important file paths to download data.
+url <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
+destfile <- "household_power_consumption.zip"
+datafile <- "household_power_consumption.txt"
 
-# Read in the data prefiltered and cleaned for plotting.
-source("download_load_ucidata.R")
+if(!file.exists(destfile)) {
+  # download and unzip file
+  download.file(url,destfile)
+  unzip(destfile , exdir=".")
+}
 
-# Main variable of interaction is "pow_df"
+#------------------------------------------
+# Power Consumption Date table.
+#------------------------------------------
+powtotal_df <- read.table(datafile, sep = ';', header = TRUE, stringsAsFactors = FALSE, na.strings = c("NA","?"))
 
-if(!exists("pow_df")) stop("Main Data not found: pow_df")
+#-------- using Simple Method ------------------------------
+# filter for dates 01/02/2007 02/02/2007 03/02/2007
+pow_df <- filter(powtotal_df, Date %in% c("1/2/2007", "2/2/2007"))
+
+#-------- Clean the memory ---------------------------
+remove("powtotal_df")
+
 
 ##--------------------------------------------------------
 ## Setup Output Device
